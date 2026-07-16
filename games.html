@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learning Games | Digital Saksharta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<style>
+
+.game-container{
+max-width:1100px;
+margin:40px auto;
+padding:20px;
+text-align:center;
+}
+
+.memory-grid{
+display:grid;
+grid-template-columns:repeat(4,120px);
+gap:15px;
+justify-content:center;
+margin-top:30px;
+}
+
+.card-game{
+height:120px;
+background:#2563EB;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+color:white;
+cursor:pointer;
+transition:.3s;
+user-select:none;
+}
+
+.card-game.flip{
+background:#10B981;
+}
+
+.score-box{
+margin:30px;
+font-size:22px;
+font-weight:700;
+}
+
+.stars{
+font-size:40px;
+color:gold;
+margin-top:20px;
+}
+
+@media(max-width:700px){
+
+.memory-grid{
+
+grid-template-columns:repeat(3,90px);
+
+}
+
+.card-game{
+
+height:90px;
+font-size:28px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a class="active" href="games.html">Games</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+
+Learn with
+
+<span>Fun Games</span>
+
+</h1>
+
+<p>
+
+Play educational games to improve your
+digital literacy while having fun.
+
+</p>
+
+</div>
+
+</section>
+
+<div class="game-container">
+
+<h2>
+
+🧠 Memory Match Game
+
+</h2>
+
+<p>
+
+Find matching digital icons.
+
+</p>
+
+<div class="score-box">
+
+Moves :
+<span id="moves">0</span>
+
+</div>
+
+<div class="memory-grid" id="grid">
+
+</div>
+
+<div class="stars" id="stars">
+
+⭐⭐⭐
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-bottom">
+
+© 2026 Digital Saksharta
+
+</div>
+
+</footer>
+
+<script>
+
+const emojis=[
+"💻","💻",
+"🔒","🔒",
+"📱","📱",
+"💳","💳",
+"🌐","🌐",
+"📂","📂"
+];
+
+emojis.sort(()=>Math.random()-0.5);
+
+const grid=document.getElementById("grid");
+
+let first=null;
+let second=null;
+let lock=false;
+let moves=0;
+let matched=0;
+
+function updateMoves(){
+
+document.getElementById("moves").innerText=moves;
+
+}
+
+emojis.forEach(icon=>{
+
+const card=document.createElement("div");
+
+card.className="card-game";
+
+card.dataset.icon=icon;
+
+card.innerHTML="?";
+
+card.onclick=function(){
+
+if(lock||card.classList.contains("flip")) return;
+
+card.classList.add("flip");
+
+card.innerHTML=icon;
+
+if(!first){
+
+first=card;
+
+}
+
+else{
+
+second=card;
+
+moves++;
+
+updateMoves();
+
+lock=true;
+
+if(first.dataset.icon===second.dataset.icon){
+
+matched++;
+
+first=null;
+
+second=null;
+
+lock=false;
+
+if(matched===6){
+
+setTimeout(()=>{
+
+alert("🎉 Congratulations! You completed the Memory Game.");
+
+},300);
+
+}
+
+}
+
+else{
+
+setTimeout(()=>{
+
+first.classList.remove("flip");
+
+second.classList.remove("flip");
+
+first.innerHTML="?";
+
+second.innerHTML="?";
+
+first=null;
+
+second=null;
+
+lock=false;
+
+},800);
+
+}
+
+}
+
+};
+
+grid.appendChild(card);
+
+});
+
+</script>
+
+</body>
+
+</html>
