@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | Digital Saksharta</title>
+
+<meta name="description"
+content="Student Dashboard - Digital Saksharta">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- Loader -->
+
+<div class="loader">
+<div class="spinner"></div>
+</div>
+
+<!-- Header -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a class="active"
+href="dashboard.html">
+
+Dashboard
+
+</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="hero-badge">
+
+📊 Student Dashboard
+
+</span>
+
+<h1>
+
+Track Your
+
+<span>Learning Progress</span>
+
+</h1>
+
+<p>
+
+Monitor completed modules, quiz performance,
+earned certificates and your digital literacy
+journey.
+
+</p>
+
+<a href="modules.html"
+class="btn">
+
+Continue Learning
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="glass"
+style="padding:40px;text-align:center;">
+
+<i class="fa-solid fa-chart-line"
+style="font-size:90px;color:#2563EB;"></i>
+
+<h2 style="margin-top:20px;">
+
+Overall Progress
+
+</h2>
+
+<h1 id="progressPercent">
+
+80%
+
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Dashboard Cards -->
+
+<section class="features">
+
+<h2>
+
+Student Progress
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h3>
+
+10 / 10
+
+</h3>
+
+<p>
+
+Modules Completed
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<h3>
+
+24 / 30
+
+</h3>
+
+<p>
+
+Quiz Score
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-award"></i>
+
+<h3>
+
+1
+
+</h3>
+
+<p>
+
+Certificate Earned
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>
+
+★★★★★
+
+</h3>
+
+<p>
+
+Learning Rating
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= Learning Analytics ================= -->
+
+<section class="features">
+
+<h2>Learning Analytics</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<canvas id="progressChart"></canvas>
+
+</div>
+
+<div class="card">
+
+<h3>Overall Progress</h3>
+
+<div class="progress-box">
+
+<p>Modules Completed</p>
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:100%;">100%</div>
+
+</div>
+
+<p>Quiz Performance</p>
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:80%;">80%</div>
+
+</div>
+
+<p>Digital Skills</p>
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:90%;">90%</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Achievements ================= -->
+
+<section class="features">
+
+<h2>Achievements</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>Digital Explorer</h3>
+
+<p>
+
+Completed all Digital India learning modules.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Cyber Safety Expert</h3>
+
+<p>
+
+Successfully completed the Cyber Safety quiz.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-certificate"></i>
+
+<h3>Certified Learner</h3>
+
+<p>
+
+Earned the Digital Saksharta Certificate.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Weekly Progress ================= -->
+
+<section class="features">
+
+<h2>Weekly Learning Progress</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Monday</h3>
+
+<p>✔ Aadhaar Guide</p>
+
+</div>
+
+<div class="card">
+
+<h3>Tuesday</h3>
+
+<p>✔ DigiLocker</p>
+
+</div>
+
+<div class="card">
+
+<h3>Wednesday</h3>
+
+<p>✔ Cyber Safety</p>
+
+</div>
+
+<div class="card">
+
+<h3>Thursday</h3>
+
+<p>✔ Scholarship Portal</p>
+
+</div>
+
+<div class="card">
+
+<h3>Friday</h3>
+
+<p>✔ Quiz Practice</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Goals ================= -->
+
+<section class="features">
+
+<h2>Learning Goals</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-bullseye"></i>
+
+<h3>Complete All Modules</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Score Above 80%</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-trophy"></i>
+
+<h3>Earn Certificate</h3>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Become Digitally Aware</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>
+
+Keep Learning Every Day
+
+</h2>
+
+<p>
+
+Every completed module makes you a smarter and safer digital citizen.
+
+</p>
+
+<a href="modules.html" class="btn">
+
+Continue Learning
+
+</a>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div>
+
+<h3>Digital Saksharta</h3>
+
+<p>
+
+Empowering students through digital literacy.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a><br>
+
+<a href="modules.html">Modules</a><br>
+
+<a href="quiz.html">Quiz</a><br>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div>
+
+<h3>Project</h3>
+
+<p>GTU Social Internship 2026</p>
+
+<p>Education Theme</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+© 2026 Digital Saksharta | All Rights Reserved
+
+</div>
+
+</footer>
+
+<button id="scrollTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="js/app.js"></script>
+
+<script>
+
+const ctx=document.getElementById("progressChart");
+
+if(ctx){
+
+new Chart(ctx,{
+
+type:"doughnut",
+
+data:{
+
+labels:["Completed","Remaining"],
+
+datasets:[{
+
+data:[80,20],
+
+backgroundColor:["#10B981","#2563EB"],
+
+borderWidth:0
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+position:"bottom"
+
+}
+
+}
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
