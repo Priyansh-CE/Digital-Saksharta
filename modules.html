@@ -1,1 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learning Modules | Digital Saksharta</title>
+
+<meta name="description"
+content="Explore Digital Literacy learning modules including Cyber Safety, Aadhaar, DigiLocker, APAAR ID, ABC ID and Government Digital Services.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+<div class="spinner"></div>
+</div>
+
+<div class="top-bar">
+
+📚 Learn Digital Skills • Complete Modules • Earn Certificate
+
+</div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html" class="active">Modules</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="hero-badge">
+
+<i class="fa-solid fa-book-open"></i>
+
+Learning Hub
+
+</span>
+
+<h1>
+
+Explore
+
+<span>Digital Literacy</span>
+
+Modules
+
+</h1>
+
+<p>
+
+Learn Digital India, Cyber Security,
+Aadhaar, DigiLocker,
+UPI Safety,
+APAAR ID,
+ABC ID and much more.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-icon-card">
+
+<i class="fa-solid fa-laptop-code"></i>
+
+<h2>
+
+10+
+
+</h2>
+
+<p>
+
+Interactive Modules
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="features">
+
+<h2>
+
+Find Your Learning Module
+
+</h2>
+
+<div class="search-box">
+
+<i class="fa-solid fa-search"></i>
+
+<input
+type="text"
+id="searchModule"
+placeholder="Search Module...">
+
+</div>
+
+<div class="cards"
+id="moduleContainer">
+<!-- ================= MODULE 1 ================= -->
+
+<div class="card module-card" data-name="digital india">
+
+    <i class="fa-solid fa-globe"></i>
+
+    <h3>Digital India</h3>
+
+    <p>
+        Learn about the Digital India Mission,
+        its objectives, services, and benefits.
+    </p>
+
+    <a href="digital-india.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 2 ================= -->
+
+<div class="card module-card" data-name="aadhaar">
+
+    <i class="fa-solid fa-id-card"></i>
+
+    <h3>Aadhaar Card</h3>
+
+    <p>
+        Learn Aadhaar registration, updates,
+        download process and important safety tips.
+    </p>
+
+    <a href="aadhaar.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 3 ================= -->
+
+<div class="card module-card" data-name="digilocker">
+
+    <i class="fa-solid fa-wallet"></i>
+
+    <h3>DigiLocker</h3>
+
+    <p>
+        Store your certificates and government
+        documents securely in digital format.
+    </p>
+
+    <a href="digilocker.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 4 ================= -->
+
+<div class="card module-card" data-name="cyber safety">
+
+    <i class="fa-solid fa-shield-halved"></i>
+
+    <h3>Cyber Safety</h3>
+
+    <p>
+        Stay protected from cyber attacks,
+        phishing, hacking and online scams.
+    </p>
+
+    <a href="cyber.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 5 ================= -->
+
+<div class="card module-card" data-name="internet safety">
+
+    <i class="fa-solid fa-wifi"></i>
+
+    <h3>Internet Safety</h3>
+
+    <p>
+        Browse safely, identify fake websites
+        and protect your personal information.
+    </p>
+
+    <a href="internet.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 6 ================= -->
+
+<div class="card module-card" data-name="upi safety">
+
+    <i class="fa-solid fa-money-bill-wave"></i>
+
+    <h3>UPI Safety</h3>
+
+    <p>
+        Learn secure online payments,
+        QR code safety and fraud prevention.
+    </p>
+
+    <a href="upi.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 7 ================= -->
+
+<div class="card module-card" data-name="apaar id">
+
+    <i class="fa-solid fa-address-card"></i>
+
+    <h3>APAAR ID</h3>
+
+    <p>
+        Understand the One Nation One Student
+        ID system and its educational benefits.
+    </p>
+
+    <a href="apaar.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 8 ================= -->
+
+<div class="card module-card" data-name="abc id">
+
+    <i class="fa-solid fa-user-graduate"></i>
+
+    <h3>ABC ID</h3>
+
+    <p>
+        Learn about the Academic Bank of Credits
+        and how students can use it.
+    </p>
+
+    <a href="abc.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 9 ================= -->
+
+<div class="card module-card" data-name="scholarship">
+
+    <i class="fa-solid fa-award"></i>
+
+    <h3>Scholarship Portal</h3>
+
+    <p>
+        Learn how to apply for scholarships,
+        required documents and useful tips.
+    </p>
+
+    <a href="scholarship.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+
+<!-- ================= MODULE 10 ================= -->
+
+<div class="card module-card" data-name="government services">
+
+    <i class="fa-solid fa-building-columns"></i>
+
+    <h3>Government Services</h3>
+
+    <p>
+        Explore important online government
+        services available for citizens.
+    </p>
+
+    <a href="government.html" class="btn">
+        Learn More
+    </a>
+
+</div>
+<!-- ================= END OF MODULE CARDS ================= -->
+
+</div>
+
+</section>
+
+<!-- ================= LEARNING PROGRESS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <h2>10</h2>
+
+        <p>Total Modules</p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>30+</h2>
+
+        <p>Quiz Questions</p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>100%</h2>
+
+        <p>Free Learning</p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>1</h2>
+
+        <p>Certificate</p>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURED MODULE ================= -->
+
+<section class="cta">
+
+    <h2>
+
+        ⭐ Featured Module
+
+    </h2>
+
+    <p>
+
+        Start with <strong>Cyber Safety</strong> to understand
+        passwords, phishing attacks, fake websites,
+        online scams, and safe internet practices.
+
+    </p>
+
+    <a href="cyber.html" class="btn">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Start Cyber Safety
+
+    </a>
+
+</section>
+
+<!-- ================= DIGITAL JOURNEY ================= -->
+
+<section class="features">
+
+    <h2>
+
+        Your Digital Learning Journey
+
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <h3>Step 1</h3>
+
+            <p>
+
+                Choose a learning module.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-laptop"></i>
+
+            <h3>Step 2</h3>
+
+            <p>
+
+                Read the complete guide with examples.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-question"></i>
+
+            <h3>Step 3</h3>
+
+            <p>
+
+                Attempt the interactive quiz.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>Step 4</h3>
+
+            <p>
+
+                Earn your Digital Literacy Certificate.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+
+        Ready to Become Digitally Smart?
+
+    </h2>
+
+    <p>
+
+        Complete every module, test your knowledge
+        through quizzes and become a responsible
+        digital citizen.
+
+    </p>
+
+    <a href="quiz.html" class="btn">
+
+        <i class="fa-solid fa-circle-question"></i>
+
+        Take Quiz
+
+    </a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-column">
+
+            <h3>
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Digital Saksharta
+
+            </h3>
+
+            <p>
+
+                Learn Digital India,
+                Cyber Safety,
+                Aadhaar,
+                DigiLocker,
+                APAAR ID,
+                ABC ID,
+                UPI Safety and Government Digital Services.
+
+            </p>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Quick Links
+
+            </h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="quiz.html">Quiz</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+            <p>
+
+                GTU Social Internship Project
+
+            </p>
+
+            <p>
+
+                Computer Engineering
+
+            </p>
+
+            <p>
+
+                Digital Literacy Awareness
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-social">
+
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+        <a href="#"><i class="fab fa-instagram"></i></a>
+
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+
+        <a href="#"><i class="fab fa-github"></i></a>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        © 2026 Digital Saksharta | GTU Social Internship Project
+
+    </div>
+
+</footer>
+
+<button id="scrollTop">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+
+duration:1000,
+
+once:true
+
+});
+
+const search=document.getElementById("searchModule");
+
+const cards=document.querySelectorAll(".module-card");
+
+search.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+cards.forEach(card=>{
+
+let text=card.dataset.name.toLowerCase();
+
+card.style.display=text.includes(value)?"block":"none";
+
+});
+
+});
+
+</script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
