@@ -223,3 +223,112 @@ function showToast(message){
     },3000);
 
 }
+/* ====================================
+   FAQ Toggle
+==================================== */
+
+const faqButtons = document.querySelectorAll(".faq-question");
+
+faqButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const item = button.parentElement;
+
+        item.classList.toggle("active");
+
+    });
+
+});
+
+
+/* ====================================
+   Progress Tracking
+==================================== */
+
+const progressCards = document.querySelectorAll(".complete-module");
+
+progressCards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.innerHTML = "✅ Completed";
+
+        card.classList.add("completed");
+
+        localStorage.setItem(card.dataset.module, "completed");
+
+        showToast("Module Completed Successfully 🎉");
+
+    });
+
+});
+
+
+/* ====================================
+   Load Completed Modules
+==================================== */
+
+progressCards.forEach(card => {
+
+    if(localStorage.getItem(card.dataset.module) === "completed"){
+
+        card.innerHTML = "✅ Completed";
+
+        card.classList.add("completed");
+
+    }
+
+});
+
+
+/* ====================================
+   Dashboard Progress
+==================================== */
+
+const progressText = document.getElementById("progressPercent");
+
+if(progressText){
+
+    let completed = 0;
+
+    progressCards.forEach(card => {
+
+        if(card.classList.contains("completed")){
+
+            completed++;
+
+        }
+
+    });
+
+    const percent = Math.round((completed / 10) * 100);
+
+    progressText.innerHTML = percent + "%";
+
+}
+
+
+/* ====================================
+   Search Modules
+==================================== */
+
+const search = document.getElementById("searchModule");
+
+if(search){
+
+search.addEventListener("keyup",()=>{
+
+const value = search.value.toLowerCase();
+
+document.querySelectorAll(".module-card").forEach(card=>{
+
+const text = card.innerText.toLowerCase();
+
+card.style.display = text.includes(value) ? "block" : "none";
+
+});
+
+});
+
+}
