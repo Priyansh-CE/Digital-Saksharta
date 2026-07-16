@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Saksharta Certificate</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:#eef4ff;
+
+padding:40px;
+
+}
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.input-box{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.input-box input{
+
+width:350px;
+
+padding:15px;
+
+font-size:18px;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+outline:none;
+
+}
+
+.input-box button{
+
+padding:15px 30px;
+
+background:#2563EB;
+
+color:#fff;
+
+border:none;
+
+border-radius:10px;
+
+font-size:17px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+}
+
+#certificate{
+
+display:none;
+
+background:#fff;
+
+padding:60px;
+
+border:10px solid #2563EB;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+#certificate h1{
+
+font-size:48px;
+
+color:#2563EB;
+
+margin-bottom:10px;
+
+}
+
+#certificate h2{
+
+font-size:34px;
+
+margin:30px 0;
+
+color:#111827;
+
+}
+
+#certificate p{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+.badge{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.signatures{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:70px;
+
+}
+
+.signatures div{
+
+text-align:center;
+
+width:200px;
+
+border-top:2px solid #000;
+
+padding-top:10px;
+
+font-weight:600;
+
+}
+
+.download{
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+.download button{
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+border-radius:12px;
+
+background:#10B981;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+@media(max-width:768px){
+
+#certificate{
+
+padding:25px;
+
+}
+
+.signatures{
+
+flex-direction:column;
+
+gap:40px;
+
+align-items:center;
+
+}
+
+.input-box input{
+
+width:100%;
+
+margin-bottom:15px;
+
+}
+
+.input-box button{
+
+margin-left:0;
+
+width:100%;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="input-box">
+
+<h2>Generate Your Certificate</h2>
+
+<br>
+
+<input
+
+type="text"
+
+id="studentName"
+
+placeholder="Enter Your Full Name">
+
+<button onclick="generateCertificate()">
+
+Generate
+
+</button>
+
+</div>
+
+<div id="certificate">
+
+<div class="badge">
+
+🏆
+
+</div>
+
+<h1>
+
+Certificate of Achievement
+
+</h1>
+
+<p>
+
+This certificate is proudly presented to
+
+</p>
+
+<h2 id="certificateName">
+
+Student Name
+
+</h2>
+
+<p>
+
+for successfully completing the
+
+<strong>Digital Saksharta (Digital Literacy Awareness)</strong>
+
+Program and demonstrating knowledge of
+
+Cyber Safety, Digital India, Aadhaar,
+
+DigiLocker and Government Digital Services.
+
+</p>
+
+<br>
+
+<p>
+
+Quiz Score :
+
+<strong id="score">
+
+0%
+
+</strong>
+
+</p>
+
+<p>
+
+Date :
+
+<span id="date">
+
+</span>
+
+</p>
+
+<div class="signatures">
+
+<div>
+
+Faculty Guide
+
+</div>
+
+<div>
+
+Project Coordinator
+
+</div>
+
+</div>
+
+</div>
+
+<div class="download">
+
+<button onclick="window.print()">
+
+🖨️ Print / Save as PDF
+
+</button>
+
+</div>
+
+</div>
+<script>
+
+function generateCertificate(){
+
+const name=document.getElementById("studentName").value.trim();
+
+if(name===""){
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+document.getElementById("certificate").style.display="block";
+
+document.getElementById("certificateName").innerHTML=name;
+
+let score=localStorage.getItem("quizScore");
+
+if(score===null){
+
+score="Not Available";
+
+}else{
+
+score=score+"%";
+
+}
+
+document.getElementById("score").innerHTML=score;
+
+const today=new Date();
+
+const options={
+
+day:"2-digit",
+
+month:"long",
+
+year:"numeric"
+
+};
+
+document.getElementById("date").innerHTML=
+
+today.toLocaleDateString("en-IN",options);
+
+window.scrollTo({
+
+top:document.getElementById("certificate").offsetTop,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+<style>
+
+@media print{
+
+body{
+
+background:#ffffff;
+
+padding:0;
+
+}
+
+.input-box,
+
+.download{
+
+display:none;
+
+}
+
+#certificate{
+
+display:block !important;
+
+box-shadow:none;
+
+border:8px solid #2563EB;
+
+margin:0;
+
+width:100%;
+
+page-break-inside:avoid;
+
+}
+
+}
+
+</style>
+
+</body>
+
+</html>
