@@ -846,3 +846,44 @@ footer p{
     animation:fadeUp .8s ease forwards;
 
 }
+/* ===========================
+   Toast Notification
+=========================== */
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(100px);
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:50px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    font-weight:500;
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
