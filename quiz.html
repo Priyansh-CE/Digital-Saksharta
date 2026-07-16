@@ -1,1 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Digital Literacy Quiz | Digital Saksharta</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+
+<div class="spinner"></div>
+
+</div>
+
+<div class="top-bar">
+
+📝 Test Your Digital Knowledge
+
+</div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a href="cyber.html">Cyber Safety</a></li>
+
+<li><a class="active"
+href="quiz.html">
+
+Quiz
+
+</a>
+
+</li>
+
+<li><a href="contact.html">
+
+Contact
+
+</a></li>
+
+</ul>
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="hero-badge">
+
+<i class="fa-solid fa-award"></i>
+
+Interactive Quiz
+
+</span>
+
+<h1>
+
+Digital Literacy
+
+<span>Quiz</span>
+
+</h1>
+
+<p>
+
+Answer multiple-choice questions,
+check your score and earn your
+Digital Saksharta Certificate.
+
+</p>
+
+<a href="#quiz"
+
+class="btn">
+
+Start Quiz
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-icon-card">
+
+<i class="fa-solid fa-circle-question"></i>
+
+<h2>
+
+30
+
+</h2>
+
+<p>
+
+Questions
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section
+class="features"
+id="quiz">
+
+<h2>
+
+Digital Literacy Quiz
+
+</h2>
+
+<div class="card"
+style="max-width:800px;margin:auto;">
+
+<div
+style="display:flex;justify-content:space-between;margin-bottom:20px;">
+
+<h3 id="questionNumber">
+
+Question 1 / 10
+
+</h3>
+
+<h3>
+
+⏱️
+
+<span id="timer">
+
+60
+
+</span>
+
+sec
+
+</h3>
+
+</div>
+
+<h2
+id="question">
+
+Loading...
+
+</h2>
+
+<br>
+
+<div id="options">
+
+</div>
+
+<br>
+
+<button
+class="btn"
+onclick="nextQuestion()">
+
+Next Question
+
+</button>
+
+</div>
+
+</section>
+  <!-- ================= RESULT ================= -->
+
+<section class="features" id="resultSection" style="display:none;">
+
+    <div class="card" style="max-width:800px;margin:auto;text-align:center;">
+
+        <i class="fa-solid fa-award"
+           style="font-size:70px;color:#10B981;margin-bottom:20px;"></i>
+
+        <h2>Quiz Completed!</h2>
+
+        <br>
+
+        <h3 id="finalScore"></h3>
+
+        <br>
+
+        <p id="message"></p>
+
+        <br>
+
+        <a href="certificate.html"
+           class="btn"
+           id="certificateBtn"
+           style="display:none;">
+
+            <i class="fa-solid fa-download"></i>
+
+            Download Certificate
+
+        </a>
+
+        <br><br>
+
+        <button
+        class="btn-outline"
+        onclick="location.reload()">
+
+        Try Again
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+Digital Saksharta
+
+</h3>
+
+<p>
+
+Improve your digital knowledge through
+interactive quizzes.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a href="cyber.html">Cyber Safety</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2026 Digital Saksharta
+
+</div>
+
+</footer>
+
+<button id="scrollTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script>
+
+const questions=[
+
+{
+question:"What does OTP stand for?",
+options:[
+"One Time Password",
+"Online Transfer Password",
+"Original Text Password",
+"Only Trusted Person"
+],
+answer:0
+},
+
+{
+question:"Which website is secure?",
+options:[
+"http://example.com",
+"https://example.com",
+"example.fake",
+"unknown.xyz"
+],
+answer:1
+},
+
+{
+question:"Should you share your UPI PIN?",
+options:[
+"Yes",
+"No",
+"Only with friends",
+"Only on WhatsApp"
+],
+answer:1
+},
+
+{
+question:"Which document can be stored in DigiLocker?",
+options:[
+"Aadhaar",
+"Driving Licence",
+"Marksheet",
+"All of these"
+],
+answer:3
+},
+
+{
+question:"Which symbol indicates a secure website?",
+options:[
+"Lock Icon",
+"Star",
+"Heart",
+"Bell"
+],
+answer:0
+},
+
+{
+question:"What should you never share?",
+options:[
+"OTP",
+"Password",
+"Bank PIN",
+"All of these"
+],
+answer:3
+},
+
+{
+question:"What is Cyber Safety?",
+options:[
+"Safe internet usage",
+"Playing games",
+"Watching movies",
+"Buying phones"
+],
+answer:0
+},
+
+{
+question:"Which app stores digital documents?",
+options:[
+"Instagram",
+"DigiLocker",
+"WhatsApp",
+"YouTube"
+],
+answer:1
+},
+
+{
+question:"Aadhaar is issued by?",
+options:[
+"UIDAI",
+"Google",
+"Microsoft",
+"GTU"
+],
+answer:0
+},
+
+{
+question:"Digital India promotes?",
+options:[
+"Digital Services",
+"Digital Literacy",
+"Online Governance",
+"All of these"
+],
+answer:3
+}
+
+];
+
+let current=0;
+
+let score=0;
+
+let selected=-1;
+
+let time=60;
+
+const q=document.getElementById("question");
+
+const opt=document.getElementById("options");
+
+const number=document.getElementById("questionNumber");
+
+function loadQuestion(){
+
+number.innerHTML=`Question ${current+1} / ${questions.length}`;
+
+q.innerHTML=questions[current].question;
+
+opt.innerHTML="";
+
+selected=-1;
+
+questions[current].options.forEach((item,index)=>{
+
+let button=document.createElement("button");
+
+button.className="btn-outline";
+
+button.style.display="block";
+
+button.style.width="100%";
+
+button.style.margin="10px 0";
+
+button.innerHTML=item;
+
+button.onclick=function(){
+
+selected=index;
+
+document.querySelectorAll("#options button").forEach(b=>{
+
+b.style.background="";
+
+b.style.color="";
+
+});
+
+button.style.background="#2563EB";
+
+button.style.color="#fff";
+
+};
+
+opt.appendChild(button);
+
+});
+
+}
+
+function nextQuestion(){
+
+if(selected==-1){
+
+alert("Please select an answer.");
+
+return;
+
+}
+
+if(selected===questions[current].answer){
+
+score++;
+
+}
+
+current++;
+
+if(current<questions.length){
+
+loadQuestion();
+
+}
+
+else{
+
+finishQuiz();
+
+}
+
+}
+
+function finishQuiz(){
+
+document.getElementById("quiz").style.display="none";
+
+document.getElementById("resultSection").style.display="block";
+
+let percent=Math.round(score/questions.length*100);
+
+localStorage.setItem("quizScore",percent);
+
+document.getElementById("finalScore").innerHTML=
+
+`Score : ${score}/${questions.length} (${percent}%)`;
+
+if(percent>=70){
+
+document.getElementById("message").innerHTML=
+
+"🎉 Congratulations! You passed the quiz.";
+
+document.getElementById("certificateBtn").style.display="inline-flex";
+
+}
+
+else{
+
+document.getElementById("message").innerHTML=
+
+"Keep learning and try again!";
+
+}
+
+}
+
+loadQuestion();
+
+setInterval(function(){
+
+time--;
+
+document.getElementById("timer").innerHTML=time;
+
+if(time<=0){
+
+finishQuiz();
+
+}
+
+},1000);
+
+</script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
