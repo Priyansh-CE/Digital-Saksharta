@@ -1,1 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Safety | Digital Saksharta</title>
+
+<meta name="description"
+content="Learn Cyber Safety, Password Security, Online Fraud Awareness and Safe Internet Practices.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+<div class="spinner"></div>
+</div>
+
+<div class="top-bar">
+
+🛡️ Stay Safe • Stay Smart • Stay Secure Online
+
+</div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a class="active" href="cyber.html">Cyber Safety</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="hero-badge">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Cyber Security
+
+</span>
+
+<h1>
+
+Stay Safe
+
+<span>Online</span>
+
+</h1>
+
+<p>
+
+Learn how to create strong passwords,
+identify fake websites,
+avoid phishing attacks,
+protect personal information,
+and become a responsible digital citizen.
+
+</p>
+
+<a href="#passwordChecker"
+class="btn">
+
+<i class="fa-solid fa-lock"></i>
+
+Check Password
+
+</a>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-icon-card">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h2>
+
+Cyber Safety
+
+</h2>
+
+<p>
+
+Protect Yourself Online
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PASSWORD CHECKER -->
+
+<section class="features"
+id="passwordChecker">
+
+<h2>
+
+Password Strength Checker
+
+</h2>
+
+<div class="search-box">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<button
+class="btn"
+onclick="checkPassword()">
+
+Check
+
+</button>
+
+</div>
+
+<div
+id="strengthResult"
+style="margin-top:25px;font-size:20px;font-weight:600;text-align:center;">
+</div>
+
+</section>
+  <!-- ======================================================
+     PASSWORD GENERATOR
+====================================================== -->
+
+<section class="features">
+
+    <h2>Strong Password Generator</h2>
+
+    <div class="search-box">
+
+        <input type="text"
+               id="generatedPassword"
+               readonly
+               placeholder="Click Generate Password">
+
+        <button class="btn"
+                onclick="generatePassword()">
+
+            Generate
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     FAKE VS REAL WEBSITE
+====================================================== -->
+
+<section class="features">
+
+    <h2>Fake vs Real Website</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Safe Website</h3>
+
+            <p>
+
+                ✔ HTTPS Secure Connection<br>
+                ✔ Correct Domain Name<br>
+                ✔ Lock Icon Visible<br>
+                ✔ Trusted Organization
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <h3>Fake Website</h3>
+
+            <p>
+
+                ❌ No HTTPS<br>
+                ❌ Misspelled URL<br>
+                ❌ Too Many Popups<br>
+                ❌ Asking for OTP
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     CYBER SAFETY TIPS
+====================================================== -->
+
+<section class="features">
+
+    <h2>Cyber Safety Tips</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-key"></i>
+
+            <h3>Strong Password</h3>
+
+            <p>
+
+                Use at least 12 characters with
+                uppercase, lowercase,
+                numbers and symbols.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <h3>Never Share OTP</h3>
+
+            <p>
+
+                Banks never ask for OTP,
+                PIN or Password.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-envelope-circle-check"></i>
+
+            <h3>Avoid Phishing</h3>
+
+            <p>
+
+                Never click suspicious
+                emails or unknown links.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>Enable 2FA</h3>
+
+            <p>
+
+                Turn on Two-Factor Authentication
+                for extra account security.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     ONLINE FRAUD
+====================================================== -->
+
+<section class="cta">
+
+    <h2>Beware of Online Frauds</h2>
+
+    <p>
+
+        Never share OTP, ATM PIN,
+        Aadhaar details,
+        passwords or bank information.
+
+        Verify every website before making
+        online payments.
+
+    </p>
+
+</section>
+
+<!-- ======================================================
+     MINI QUIZ
+====================================================== -->
+
+<section class="features">
+
+    <h2>Quick Cyber Quiz</h2>
+
+    <div class="card"
+         style="max-width:700px;margin:auto;">
+
+        <h3>
+
+            Should you share your OTP with anyone?
+
+        </h3>
+
+        <br>
+
+        <button class="btn"
+                onclick="quizAnswer(false)">
+
+            Yes
+
+        </button>
+
+        <button class="btn-outline"
+                onclick="quizAnswer(true)">
+
+            No
+
+        </button>
+
+        <br><br>
+
+        <div id="quizResult"></div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+Digital Saksharta
+
+</h3>
+
+<p>
+
+Stay safe online.
+Learn cyber security and
+protect yourself from
+digital threats.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Project
+
+</h3>
+
+<p>
+
+GTU Social Internship
+
+</p>
+
+<p>
+
+Digital Literacy Awareness
+
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+© 2026 Digital Saksharta
+
+</div>
+
+</footer>
+
+<button id="scrollTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+AOS.init({
+
+duration:1000,
+
+once:true
+
+});
+
+function checkPassword(){
+
+let pass=document.getElementById("password").value;
+
+let result=document.getElementById("strengthResult");
+
+let score=0;
+
+if(pass.length>=8) score++;
+
+if(/[A-Z]/.test(pass)) score++;
+
+if(/[a-z]/.test(pass)) score++;
+
+if(/[0-9]/.test(pass)) score++;
+
+if(/[^A-Za-z0-9]/.test(pass)) score++;
+
+if(score<=2){
+
+result.innerHTML="<span style='color:red'>Weak Password ❌</span>";
+
+}
+
+else if(score<=4){
+
+result.innerHTML="<span style='color:orange'>Medium Password ⚠️</span>";
+
+}
+
+else{
+
+result.innerHTML="<span style='color:green'>Strong Password ✅</span>";
+
+}
+
+}
+
+function generatePassword(){
+
+const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!?";
+
+let password="";
+
+for(let i=0;i<12;i++){
+
+password+=chars.charAt(Math.floor(Math.random()*chars.length));
+
+}
+
+document.getElementById("generatedPassword").value=password;
+
+}
+
+function quizAnswer(correct){
+
+let result=document.getElementById("quizResult");
+
+if(correct){
+
+result.innerHTML="<h3 style='color:green;'>Correct! Never share your OTP. ✅</h3>";
+
+}
+
+else{
+
+result.innerHTML="<h3 style='color:red;'>Wrong! OTP should never be shared. ❌</h3>";
+
+}
+
+}
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
