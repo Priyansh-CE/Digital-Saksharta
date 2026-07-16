@@ -1,1 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Digital Saksharta</title>
+
+<meta name="description"
+content="Contact the Digital Saksharta Project Team">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="stylesheet"
+href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+
+<div class="spinner"></div>
+
+</div>
+
+<div class="top-bar">
+
+📞 Contact the Digital Saksharta Team
+
+</div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>Digital Saksharta</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a href="cyber.html">Cyber Safety</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+<li><a class="active" href="contact.html">Contact</a></li>
+
+</ul>
+
+<button id="darkMode">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="hero-badge">
+
+<i class="fa-solid fa-envelope"></i>
+
+Get In Touch
+
+</span>
+
+<h1>
+
+Contact
+
+<span>Digital Saksharta</span>
+
+</h1>
+
+<p>
+
+Have questions or suggestions?
+We'd love to hear from you.
+Feel free to send your feedback.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-icon-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h2>
+
+Support
+
+</h2>
+
+<p>
+
+We're Here to Help
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECT DETAILS -->
+
+<section class="features">
+
+<h2>
+
+Project Information
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-folder-open"></i>
+
+<h3>Project</h3>
+
+<p>
+
+Digital Saksharta
+(Digital Literacy Portal)
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Purpose</h3>
+
+<p>
+
+GTU Social Internship
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-code"></i>
+
+<h3>Technology</h3>
+
+<p>
+
+HTML5, CSS3,
+JavaScript
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT FORM -->
+
+<section class="features">
+
+<h2>
+
+Send Feedback
+
+</h2>
+
+<div class="card"
+style="max-width:700px;margin:auto;">
+
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+style="width:100%;padding:15px;margin-bottom:15px;">
+
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+style="width:100%;padding:15px;margin-bottom:15px;">
+
+<textarea
+id="message"
+rows="6"
+placeholder="Write your feedback..."
+style="width:100%;padding:15px;"></textarea>
+
+<br><br>
+
+<button
+class="btn"
+onclick="saveFeedback()">
+
+Submit Feedback
+
+</button>
+
+<p
+id="successMsg"
+style="margin-top:20px;font-weight:600;color:green;"></p>
+
+</div>
+
+</section>
+  <!-- ================= TEAM ================= -->
+
+<section class="features">
+
+<h2>
+
+Project Team
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-user-graduate"></i>
+
+<h3>Student</h3>
+
+<p>
+
+Patel Priyansh
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Team Members</h3>
+
+<p>
+
+(Add Your Team Members Here)
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-chalkboard-user"></i>
+
+<h3>Faculty Guide</h3>
+
+<p>
+
+(Add Faculty Guide Name)
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= COLLEGE ================= -->
+
+<section class="cta">
+
+<h2>
+
+College Information
+
+</h2>
+
+<p>
+
+<strong>College :</strong> Saffrony Institute of Technology
+
+<br><br>
+
+<strong>Department :</strong> Computer Engineering
+
+<br><br>
+
+<strong>University :</strong> Gujarat Technological University (GTU)
+
+<br><br>
+
+<strong>Project :</strong> Social Internship - Digital Literacy Awareness
+
+</p>
+
+</section>
+
+<!-- ================= GITHUB ================= -->
+
+<section class="features">
+
+<div class="card"
+style="max-width:700px;margin:auto;text-align:center;">
+
+<i class="fab fa-github"
+style="font-size:60px;color:#2563EB;"></i>
+
+<h2>
+
+Project Repository
+
+</h2>
+
+<p>
+
+Upload your project to GitHub and host it using GitHub Pages.
+
+</p>
+
+<br>
+
+<a href="#"
+class="btn">
+
+View GitHub Repository
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+
+<h3>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+Digital Saksharta
+
+</h3>
+
+<p>
+
+Learn Today,
+Use Digital Services
+Confidently Tomorrow.
+
+</p>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Quick Links
+
+</h3>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="modules.html">Modules</a></li>
+
+<li><a href="quiz.html">Quiz</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-column">
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
+GTU Social Internship Project
+
+</p>
+
+<p>
+
+Computer Engineering
+
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+© 2026 Digital Saksharta | GTU Social Internship Project
+
+</div>
+
+</footer>
+
+<button id="scrollTop">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script>
+
+function saveFeedback(){
+
+const name=document.getElementById("name").value.trim();
+
+const email=document.getElementById("email").value.trim();
+
+const message=document.getElementById("message").value.trim();
+
+if(name==="" || email==="" || message===""){
+
+alert("Please fill all fields.");
+
+return;
+
+}
+
+const feedback={
+
+name:name,
+
+email:email,
+
+message:message,
+
+date:new Date().toLocaleDateString()
+
+};
+
+let feedbacks=JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+feedbacks.push(feedback);
+
+localStorage.setItem("feedbacks",JSON.stringify(feedbacks));
+
+document.getElementById("successMsg").innerHTML=
+
+"✅ Thank you! Your feedback has been saved successfully.";
+
+document.getElementById("name").value="";
+
+document.getElementById("email").value="";
+
+document.getElementById("message").value="";
+
+}
+
+</script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
